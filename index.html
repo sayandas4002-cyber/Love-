@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Do You Love Me?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff0f5;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      color: #ff1493;
+      font-size: 2.5em;
+    }
+
+    #button-container {
+      position: relative;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yes-btn {
+      background-color: #32cd32;
+      color: white;
+    }
+
+    #no-btn {
+      background-color: #ff4500;
+      color: white;
+      position: absolute;
+    }
+
+    #message {
+      font-size: 2em;
+      color: #8a2be2;
+      margin-top: 30px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DO YOU LOVE ME SUCHI? 🥹💞</h1>
+
+  <div id="button-container">
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+  </div>
+
+  <div id="message">🎉 Congratulations!suchismita sayan createted me only for you because to see your beatifull smile 🎉</div>
+
+  <script>
+    const noBtn = document.getElementById("no-btn");
+    const yesBtn = document.getElementById("yes-btn");
+    const message = document.getElementById("message");
+
+    // Move the "No" button randomly when hovered
+    noBtn.addEventListener("mouseenter", () => {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+      noBtn.style.left = `${randomX}px`;
+      noBtn.style.top = `${randomY}px`;
+    });
+
+    // Show message when "Yes" is clicked
+    yesBtn.addEventListener("click", () => {
+      message.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
